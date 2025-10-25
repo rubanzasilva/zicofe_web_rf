@@ -1,14 +1,7 @@
-"use client";
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="bg-coffee-brown text-white py-12">
       <div className="container">
@@ -25,11 +18,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><button onClick={() => scrollToSection('home')} className="text-gray-200 hover:text-white transition-colors">Home</button></li>
-              <li><button onClick={() => scrollToSection('about')} className="text-gray-200 hover:text-white transition-colors">About Us</button></li>
-              <li><button onClick={() => scrollToSection('beans')} className="text-gray-200 hover:text-white transition-colors">Our Coffee</button></li>
-              <li><button onClick={() => scrollToSection('impact')} className="text-gray-200 hover:text-white transition-colors">Our Impact</button></li>
-              <li><button onClick={() => scrollToSection('contact')} className="text-gray-200 hover:text-white transition-colors">Contact</button></li>
+              <li><Link href="/" className="text-gray-200 hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-gray-200 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/#beans" className="text-gray-200 hover:text-white transition-colors">Our Coffee</Link></li>
+              <li><Link href="/#impact" className="text-gray-200 hover:text-white transition-colors">Our Impact</Link></li>
+              <li><Link href="/#contact" className="text-gray-200 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -38,10 +31,10 @@ const Footer = () => {
               Subscribe to get updates on new products and offers.
             </p>
             <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="px-4 py-2 rounded-l-md w-full text-coffee-brown focus:outline-none" 
+              <input
+                type="email"
+                placeholder="Your email"
+                className="px-4 py-2 rounded-l-md w-full text-coffee-brown focus:outline-none"
               />
               <button className="bg-coffee-dark hover:bg-coffee-medium px-4 py-2 rounded-r-md transition-colors">
                 Subscribe

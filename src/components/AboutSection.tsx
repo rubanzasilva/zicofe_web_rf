@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AboutSection = () => {
   return (
@@ -11,14 +12,14 @@ const AboutSection = () => {
             A journey of determination and growth in Central Uganda since 1984
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             {/* Replace with your actual image */}
             <div className="w-full h-96 bg-gray-200 rounded-lg shadow-lg relative">
-              <Image 
-                src="/coffee-farm.jpg" 
-                alt="Zigoti Coffee Farm" 
+              <Image
+                src="/coffee-farm.jpg"
+                alt="Zigoti Coffee Farm"
                 fill
                 style={{ objectFit: 'cover' }}
                 className="rounded-lg"
@@ -38,6 +39,12 @@ const AboutSection = () => {
               themselves to nurturing their dream, tirelessly working the land to establish
               their coffee farm, mill, roastery and even a beautiful hotel, Enro Hotel.
             </p>
+            <Link
+              href="/about"
+              className="inline-block bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors"
+            >
+              Read Our Full Story
+            </Link>
           </div>
         </div>
       </div>

@@ -23,9 +23,9 @@ const CoffeeSection = () => {
     <section id="beans" className="py-20 bg-coffee-light">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-coffee-brown mb-4">Our Coffee</h2>
+          <h2 className="text-4xl font-bold text-coffee-brown mb-4">Green Coffee Beans</h2>
           <p className="text-xl text-coffee-brown max-w-3xl mx-auto">
-            We export high-quality coffee to all parts of the world
+            We export high-quality green coffee beans to all parts of the world
           </p>
         </div>
         
