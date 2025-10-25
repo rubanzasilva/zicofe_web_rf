@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 const CoffeeSection = () => {
@@ -76,9 +77,9 @@ const CoffeeSection = () => {
             {arabicaBeans.map((bean, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 w-full">
-                  <Image 
-                    src={bean.image} 
-                    alt={bean.name} 
+                  <Image
+                    src={bean.image}
+                    alt={bean.name}
                     fill
                     style={{ objectFit: 'cover' }}
                   />
@@ -93,6 +94,19 @@ const CoffeeSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* View All Products Button */}
+        <div className="text-center mt-12">
+          <Link
+            href="/products"
+            className="inline-flex items-center bg-coffee-brown text-white px-8 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium"
+          >
+            View All Products <ChevronRight size={20} className="ml-2" />
+          </Link>
+          <p className="text-coffee-brown mt-4">
+            Browse our complete catalog of {activeTab === 0 ? '7 Robusta' : '6 Arabica'} varieties
+          </p>
         </div>
       </div>
     </section>
