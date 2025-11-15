@@ -61,7 +61,7 @@ const ImpactSection = () => {
                 </p>
 
                 {/* Learn More Button */}
-                <button className="inline-flex items-center justify-center w-full bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition-colors font-medium">
+                <button className="inline-flex items-center justify-center w-full bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium">
                   Learn more <ArrowRight size={16} className="ml-2" />
                 </button>
               </div>
