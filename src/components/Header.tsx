@@ -18,9 +18,9 @@ const Header = () => {
           <Link href="/#impact" className="text-coffee-brown hover:text-coffee-dark font-medium">Our Impact</Link>
           <Link href="/#contact" className="text-coffee-brown hover:text-coffee-dark font-medium">Contact</Link>
         </nav>
-        <button className="bg-coffee-brown text-white px-6 py-2 rounded-md hover:bg-coffee-dark transition-colors">
+        <Link href="/shop" className="bg-coffee-brown text-white px-6 py-2 rounded-md hover:bg-coffee-dark transition-colors inline-block">
           Shop Now
-        </button>
+        </Link>
       </div>
     </header>
   );

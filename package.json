@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/render": "^2.0.0",
     "lucide-react": "^0.284.0",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "resend": "^6.4.2"
   },
   "devDependencies": {
     "@types/node": "^20",
