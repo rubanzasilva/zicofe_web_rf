@@ -1,19 +1,37 @@
 import React from 'react';
 import Link from 'next/link';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-coffee-brown text-white py-12">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">ZICOFE</h3>
             <p className="text-gray-200 mb-4">
               Inspiring change, one bean at a time since 1984.
             </p>
-            <p className="text-gray-200">
+            <p className="text-gray-200 mb-4">
               © {new Date().getFullYear()} Zigoti Coffee Works Ltd. All rights reserved.
             </p>
+            <div className="flex gap-4">
+              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="Facebook">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="Instagram">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="Twitter">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="LinkedIn">
+                <Linkedin size={20} />
+              </a>
+              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="YouTube">
+                <Youtube size={20} />
+              </a>
+            </div>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
@@ -26,6 +44,27 @@ const Footer = () => {
             </ul>
           </div>
           <div>
+            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <MapPin size={18} className="text-gray-200 mt-1 flex-shrink-0" />
+                <span className="text-gray-200">Plot 104, 5th street Industrial Area, Bugolobi, Kampala, Uganda</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone size={18} className="text-gray-200 flex-shrink-0" />
+                <span className="text-gray-200">+256 772 029 059</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail size={18} className="text-gray-200 flex-shrink-0" />
+                <span className="text-gray-200">sales@zicofe.com</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Clock size={18} className="text-gray-200 mt-1 flex-shrink-0" />
+                <span className="text-gray-200">Monday - Saturday: 8:00 AM - 5:00 PM</span>
+              </li>
+            </ul>
+          </div>
+          <div className="lg:ml-8">
             <h4 className="text-lg font-semibold mb-4">Newsletter</h4>
             <p className="text-gray-200 mb-4">
               Subscribe to get updates on new products and offers.
