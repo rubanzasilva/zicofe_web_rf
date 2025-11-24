@@ -2,6 +2,33 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure Email Service
+
+This project uses [Resend](https://resend.com) for sending order emails. Follow these steps to set it up:
+
+1. Create a free account at [https://resend.com](https://resend.com)
+2. Get your API key from [https://resend.com/api-keys](https://resend.com/api-keys)
+3. Copy `.env.example` to `.env.local`:
+   ```bash
+   cp .env.example .env.local
+   ```
+4. Edit `.env.local` and add your configuration:
+   ```
+   RESEND_API_KEY=re_your_actual_api_key
+   RESEND_FROM_EMAIL=onboarding@resend.dev  # Use this for testing
+   RESEND_TO_EMAIL=your-email@example.com   # Where to receive orders
+   ```
+
+Note: For production, you'll need to verify your domain in Resend and update `RESEND_FROM_EMAIL` accordingly.
+
+### 3. Run the Development Server
+
 First, run the development server:
 
 ```bash

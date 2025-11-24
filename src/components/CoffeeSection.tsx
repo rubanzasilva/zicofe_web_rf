@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 const CoffeeSection = () => {
@@ -21,11 +22,11 @@ const CoffeeSection = () => {
 
   return (
     <section id="beans" className="py-20 bg-coffee-light">
-      <div className="container mx-auto px-4">
+      <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-coffee-brown mb-4">Our Coffee</h2>
+          <h2 className="text-4xl font-bold text-coffee-brown mb-4">Green Coffee Beans</h2>
           <p className="text-xl text-coffee-brown max-w-3xl mx-auto">
-            We export high-quality coffee to all parts of the world
+            We export high-quality green coffee beans to all parts of the world
           </p>
         </div>
         
@@ -76,9 +77,9 @@ const CoffeeSection = () => {
             {arabicaBeans.map((bean, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 w-full">
-                  <Image 
-                    src={bean.image} 
-                    alt={bean.name} 
+                  <Image
+                    src={bean.image}
+                    alt={bean.name}
                     fill
                     style={{ objectFit: 'cover' }}
                   />
@@ -93,6 +94,19 @@ const CoffeeSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* View All Products Button */}
+        <div className="text-center mt-12">
+          <Link
+            href="/products"
+            className="inline-flex items-center bg-coffee-brown text-white px-8 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium"
+          >
+            View All Products <ChevronRight size={20} className="ml-2" />
+          </Link>
+          <p className="text-coffee-brown mt-4">
+            Browse our complete catalog of {activeTab === 0 ? '7 Robusta' : '6 Arabica'} varieties
+          </p>
         </div>
       </div>
     </section>

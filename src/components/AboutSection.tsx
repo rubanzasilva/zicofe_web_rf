@@ -1,24 +1,25 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-coffee-brown mb-4">Our Story</h2>
+          <h2 className="text-4xl font-bold text-coffee-brown mb-4">The ZICOFE Story</h2>
           <p className="text-xl text-coffee-brown max-w-3xl mx-auto">
             A journey of determination and growth in Central Uganda since 1984
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             {/* Replace with your actual image */}
             <div className="w-full h-96 bg-gray-200 rounded-lg shadow-lg relative">
-              <Image 
-                src="/coffee-farm.jpg" 
-                alt="Zigoti Coffee Farm" 
+              <Image
+                src="/coffee-farm.jpg"
+                alt="Zigoti Coffee Farm"
                 fill
                 style={{ objectFit: 'cover' }}
                 className="rounded-lg"
@@ -26,7 +27,7 @@ const AboutSection = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-coffee-brown mb-4">40 Years of Excellence</h3>
+            <h3 className="text-2xl font-semibold text-coffee-brown mb-4">41 Years of Excellence</h3>
             <p className="text-coffee-brown mb-6">
               In 1984, riding on a motorbike along a dusty dirt road, Rose Nakayenga Kato
               and her late husband, Enock Kisuule Kato, sought out the perfect land for
@@ -38,6 +39,12 @@ const AboutSection = () => {
               themselves to nurturing their dream, tirelessly working the land to establish
               their coffee farm, mill, roastery and even a beautiful hotel, Enro Hotel.
             </p>
+            <Link
+              href="/about"
+              className="inline-block bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors"
+            >
+              Read Our Full Story
+            </Link>
           </div>
         </div>
       </div>
