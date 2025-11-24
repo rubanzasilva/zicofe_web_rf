@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
@@ -8,7 +9,13 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">ZICOFE</h3>
+            <Image
+              src="https://d322abd807wvow.cloudfront.net/zicofe-photos/zicofeLogoSmall-Photoroom.png"
+              alt="ZICOFE Logo"
+              width={150}
+              height={50}
+              className="h-12 w-auto mb-4"
+            />
             <p className="text-gray-200 mb-4">
               Inspiring change, one bean at a time since 1984.
             </p>

@@ -1,15 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm">
       <div className="container py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center">
           <Link href="/">
-            <span className="text-2xl font-bold text-coffee-brown">ZICOFE</span>
+            <Image
+              src="https://d322abd807wvow.cloudfront.net/zicofe-photos/zicofeLogoSmall-Photoroom.png"
+              alt="ZICOFE Logo"
+              width={150}
+              height={50}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
-          <span className="text-coffee-brown font-semibold">EST. 1984</span>
         </div>
         <nav className="hidden md:flex space-x-8">
           <Link href="/" className="text-coffee-brown hover:text-coffee-dark font-medium">Home</Link>
