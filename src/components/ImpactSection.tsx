@@ -7,19 +7,19 @@ const ImpactSection = () => {
     {
       title: 'Women In Coffee',
       description: 'ZICOFE is a member of International Women in Coffee Alliance (IWCA Uganda Chapter), in partnership with the sole mission of advocating for gender equality and women\'s rights.',
-      image: '/initiatives/women-in-coffee.jpg',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_w_in_c.webp',
       alt: 'Women coffee farmers in misty forest'
     },
     {
       title: 'Sustainable Farming',
       description: 'Supporting farmers in implementing environmentally responsible practices that preserve the ecosystem while producing high-quality coffee.',
-      image: '/initiatives/sustainable-farming.jpg',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_farmer_tr.webp',
       alt: 'Mountain landscape coffee farming area'
     },
     {
       title: 'Youth Empowerment',
       description: 'Creating opportunities for young people in coffee-growing regions through education, training, and employment in the coffee industry.',
-      image: '/initiatives/youth-empowerment.jpg',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_wy_ic.webp',
       alt: 'Trees and nature in coffee growing region'
     }
   ];

@@ -9,9 +9,9 @@ const CoffeeSection = () => {
 
   // Product data
   const greenBeans = [
-    { name: 'Natural Uganda Robusta 1800', description: 'Premium grade natural robusta coffee beans', image: '/coffee1.jpg' },
-    { name: 'Natural Uganda Robusta 1500', description: 'High-quality natural robusta coffee beans', image: '/coffee2.jpg' },
-    { name: 'Natural Uganda Robusta 1700+', description: 'Superior grade natural robusta coffee beans', image: '/coffee3.jpg' }
+    { name: 'Natural Uganda Robusta 1800', description: 'Premium grade natural robusta coffee beans', image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/18.webp' },
+    { name: 'Natural Uganda Robusta 1500', description: 'High-quality natural robusta coffee beans', image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/15.webp' },
+    { name: 'Natural Uganda Robusta 1200', description: 'Superior grade natural robusta coffee beans', image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/12.webp' }
   ];
 
   const arabicaBeans = [

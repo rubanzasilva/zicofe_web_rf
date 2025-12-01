@@ -4,9 +4,9 @@ import ProcessingSection from './ProcessingSection';
 
 const WashedProcessingSection = () => {
   const images = [
-    'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd',
-    'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085',
-    'https://images.unsplash.com/photo-1442512595331-e89e73853f31'
+    'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_wp.webp',
+    'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_wp_a.webp',
+    'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_wp_b.webp'
   ];
 
   const description = [

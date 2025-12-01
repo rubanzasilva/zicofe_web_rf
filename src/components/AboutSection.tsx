@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const AboutSection = () => {
@@ -15,14 +14,14 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            {/* Replace with your actual image */}
-            <div className="w-full h-96 bg-gray-200 rounded-lg shadow-lg relative">
-              <Image
-                src="/coffee-farm.jpg"
-                alt="Zigoti Coffee Farm"
-                fill
-                style={{ objectFit: 'cover' }}
-                className="rounded-lg"
+            {/* YouTube Video Embed */}
+            <div className="w-full rounded-lg shadow-lg overflow-hidden" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+              <iframe
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                src="https://www.youtube.com/embed/QlLvgWv06eY"
+                title="ZICOFE - Zigoti Coffee Works"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
               />
             </div>
           </div>
