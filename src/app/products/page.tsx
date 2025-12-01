@@ -13,19 +13,19 @@ const ProductsPage = () => {
     {
       name: 'Natural Uganda Robusta Screen 1800',
       description: 'Premium grade natural robusta coffee beans with superior size and quality',
-      image: '/coffee1.jpg',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/18.webp',
       specs: ['Screen Size: 18', 'Processing: Natural', 'Grade: Premium']
     },
     {
       name: 'Natural Uganda Robusta Screen 1500',
       description: 'High-quality natural robusta coffee beans',
-      image: '/coffee2.jpg',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/15.webp',
       specs: ['Screen Size: 15', 'Processing: Natural', 'Grade: Standard']
     },
     {
       name: 'Natural Uganda Robusta Screen 1200',
       description: 'Quality natural robusta coffee beans',
-      image: '/coffee3.jpg',
+      image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/12.webp',
       specs: ['Screen Size: 12', 'Processing: Natural', 'Grade: Standard']
     },
     {
