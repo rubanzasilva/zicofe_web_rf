@@ -4,9 +4,9 @@ import ProcessingSection from './ProcessingSection';
 
 const NaturalProcessingSection = () => {
   const images = [
-    'https://images.unsplash.com/photo-1447933601403-0c6688de566e',
-    'https://images.unsplash.com/photo-1559056199-641a0ac8b55e',
-    'https://images.unsplash.com/photo-1509042239860-f550ce710b93'
+    'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_np.webp',
+    'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_np_a.webp',
+    'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_np_b.webp'
   ];
 
   const description = [
