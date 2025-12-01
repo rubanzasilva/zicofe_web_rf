@@ -37,15 +37,15 @@ const ContactSection = () => {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-coffee-brown mb-2 font-medium">Your Name</label>
-                <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none" />
+                <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-gray-900" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-coffee-brown mb-2 font-medium">Your Email</label>
-                <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none" />
+                <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-gray-900" />
               </div>
               <div>
                 <label htmlFor="message" className="block text-coffee-brown mb-2 font-medium">Message</label>
-                <textarea id="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none"></textarea>
+                <textarea id="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-gray-900"></textarea>
               </div>
               <button type="submit" className="bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors">
                 Send Message
