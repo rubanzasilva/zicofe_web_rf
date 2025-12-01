@@ -23,19 +23,49 @@ const Footer = () => {
               © {new Date().getFullYear()} Zigoti Coffee Works Ltd. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com/ZigotiCoffee"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-200 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/zigoticoffeeworks/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-200 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="Twitter">
+              <a
+                href="https://x.com/ZicofeOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-200 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="LinkedIn">
+              <a
+                href="https://ug.linkedin.com/company/zigoti-coffee-works-limited"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-200 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-200 hover:text-white transition-colors" aria-label="YouTube">
+              <a
+                href="https://www.youtube.com/@zigoticoffeeworks"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-200 hover:text-white transition-colors"
+                aria-label="YouTube"
+              >
                 <Youtube size={20} />
               </a>
             </div>
@@ -48,6 +78,11 @@ const Footer = () => {
               <li><Link href="/products" className="text-gray-200 hover:text-white transition-colors">Products</Link></li>
               <li><Link href="/#impact" className="text-gray-200 hover:text-white transition-colors">Our Impact</Link></li>
               <li><Link href="/#contact" className="text-gray-200 hover:text-white transition-colors">Contact</Link></li>
+            </ul>
+            <h4 className="text-lg font-semibold mb-4 mt-6">Legal</h4>
+            <ul className="space-y-2">
+              <li><Link href="/privacy-policy" className="text-gray-200 hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/cookie-policy" className="text-gray-200 hover:text-white transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
           <div>
