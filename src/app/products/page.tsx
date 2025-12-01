@@ -42,13 +42,13 @@ const ProductsPage = () => {
     },
     {
       name: 'BHP 1199',
-      description: 'Bulk hand-picked robusta coffee beans',
+      description: 'Undergrades from robusta coffee',
       image: '/coffee6.jpg',
       specs: ['Type: BHP', 'Grade: 1199', 'Processing: Hand-picked']
     },
     {
       name: 'Black Beans',
-      description: 'Specialty black bean robusta coffee',
+      description: 'Undergrade black robusta coffee beans',
       image: '/coffee7.jpg',
       specs: ['Type: Black Beans', 'Processing: Natural', 'Grade: Specialty']
     }
