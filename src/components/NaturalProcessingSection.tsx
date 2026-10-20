@@ -4,7 +4,7 @@ import ProcessingSection from './ProcessingSection';
 
 const NaturalProcessingSection = () => {
   const images = [
-    'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_np.webp',
+    'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_np_c.webp',
     'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_np_a.webp',
     'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_np_b.webp'
   ];
