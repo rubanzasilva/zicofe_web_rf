@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <Image
-              src="https://d322abd807wvow.cloudfront.net/zicofe-photos/zicofeLogoSmall-Photoroom.png"
+              src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/icon.png"
               alt="ZICOFE Logo"
               width={150}
               height={50}
