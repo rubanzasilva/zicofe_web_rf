@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Image
-              src="https://d322abd807wvow.cloudfront.net/zicofe-photos/zicofeLogoSmall-Photoroom.png"
+              src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/icon.png"
               alt="ZICOFE Logo"
               width={150}
               height={50}
