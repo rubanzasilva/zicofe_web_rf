@@ -26,7 +26,7 @@ const AboutSection = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-coffee-brown mb-4">41 Years of Excellence</h3>
+            <h3 className="text-2xl font-semibold text-coffee-brown mb-4">42 Years of Excellence</h3>
             <p className="text-coffee-brown mb-6">
               In 1984, riding on a motorbike along a dusty dirt road, Rose Nakayenga Kato
               and her late husband, Enock Kisuule Kato, sought out the perfect land for
