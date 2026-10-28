@@ -6,6 +6,7 @@ const ImpactSection = () => {
   const initiatives = [
     {
       title: 'Women In Coffee',
+      href: 'https://softpower.ug/coffee-climate-and-cash-the-women-cooking-up-ugandas-clean-energy-future/',
       description: 'ZICOFE is a member of International Women in Coffee Alliance (IWCA Uganda Chapter), in partnership with the sole mission of advocating for gender equality and women\'s rights.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_w_in_c.webp',
       alt: 'Women coffee farmers in misty forest'
@@ -18,6 +19,7 @@ const ImpactSection = () => {
     },
     {
       title: 'Youth Empowerment',
+      href: 'https://www.womenincoffee.org/blog/2024/7/23/7b0spxeg650pwh41kcpiwyl5w3jto1',
       description: 'Creating opportunities for young people in coffee-growing regions through education, training, and employment in the coffee industry.',
       image: 'https://d3q0oijmiduzg2.cloudfront.net/zicofe/z_wy_ic.webp',
       alt: 'Trees and nature in coffee growing region'
@@ -61,9 +63,19 @@ const ImpactSection = () => {
                 </p>
 
                 {/* Learn More Button */}
-                <button className="inline-flex items-center justify-center w-full bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium">
-                  Learn more <ArrowRight size={16} className="ml-2" />
-                </button>
+                {initiative.href ? (
+                  <a
+                    href={initiative.href}
+                    className="inline-flex items-center justify-center w-full bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium"
+                    aria-label={`Learn more about ${initiative.title}`}
+                  >
+                    Learn more <ArrowRight size={16} className="ml-2" />
+                  </a>
+                ) : (
+                  <button className="inline-flex items-center justify-center w-full bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium">
+                    Learn more <ArrowRight size={16} className="ml-2" />
+                  </button>
+                )}
               </div>
             </div>
           ))}
