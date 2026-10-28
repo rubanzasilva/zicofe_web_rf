@@ -32,7 +32,7 @@ const AboutPage = () => {
             <div>
               <div className="w-full h-96 bg-gray-200 rounded-lg shadow-lg relative">
                 <Image
-                  src="/coffee-farm.jpg"
+                  src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/farm.webp"
                   alt="Zigoti Coffee Farm"
                   fill
                   style={{ objectFit: 'cover' }}
@@ -135,7 +135,7 @@ const AboutPage = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/10 rounded-lg p-4 aspect-square relative">
                     <Image
-                      src="/awards/award-1.jpg"
+                      src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/21-bop.webp"
                       alt="ZICOFE Award 1"
                       fill
                       style={{ objectFit: 'contain' }}
@@ -144,7 +144,7 @@ const AboutPage = () => {
                   </div>
                   <div className="bg-white/10 rounded-lg p-4 aspect-square relative">
                     <Image
-                      src="/awards/award-2.jpg"
+                      src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/22-bop.webp"
                       alt="ZICOFE Award 2"
                       fill
                       style={{ objectFit: 'contain' }}
@@ -153,7 +153,7 @@ const AboutPage = () => {
                   </div>
                   <div className="bg-white/10 rounded-lg p-4 aspect-square relative">
                     <Image
-                      src="/awards/award-3.jpg"
+                      src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/24-bop.webp"
                       alt="ZICOFE Award 3"
                       fill
                       style={{ objectFit: 'contain' }}
@@ -162,7 +162,7 @@ const AboutPage = () => {
                   </div>
                   <div className="bg-white/10 rounded-lg p-4 aspect-square relative">
                     <Image
-                      src="/awards/award-4.jpg"
+                      src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/avpa.webp"
                       alt="ZICOFE Award 4"
                       fill
                       style={{ objectFit: 'contain' }}
@@ -405,7 +405,7 @@ const AboutPage = () => {
                 <div className="text-center">
                   <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 relative">
                     <Image
-                      src="/team/enock-ssenyonga.jpg"
+                      src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/se.webp"
                       alt="Mr. Enock Ssenyonga"
                       fill
                       style={{ objectFit: 'cover' }}
