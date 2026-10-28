@@ -13,7 +13,7 @@ const ContactSection = () => {
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-coffee-brown mb-4">Contact Us</h2>
-          <p className="text-xl text-coffee-brown max-w-3xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
             Reach out to us for inquiries, orders, or partnerships
           </p>
         </div>
@@ -21,13 +21,13 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-semibold text-coffee-brown mb-4">Get In Touch</h3>
-            <p className="text-coffee-brown mb-6">
+            <p className="text-gray-800 mb-6">
               Visit our roastery at Plot 104, 5th Street Industrial Area, Bugolobi, Kampala.
             </p>
-            <p className="text-coffee-brown mb-6">
+            <p className="text-gray-800 mb-6">
               Call us at: +256 701 465 283 or +256 762 764 298
             </p>
-            <p className="text-coffee-brown mb-6">
+            <p className="text-gray-800 mb-6">
               Email: sales@zicofe.com
             </p>
           </div>

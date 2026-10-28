@@ -9,7 +9,7 @@ export default function CookiePolicyPage() {
   return (
     <div className="min-h-screen bg-coffee-light">
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12">
+        <div className="max-w-4xl mx-auto bg-coffee-light rounded-lg shadow-lg p-8 md:p-12">
           <h1 className="text-4xl font-bold text-coffee-brown mb-6">Cookie Policy</h1>
           <p className="text-gray-600 mb-8">Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
@@ -247,7 +247,7 @@ export default function CookiePolicyPage() {
                 If you have questions about our use of cookies, please contact us:
               </p>
               <div className="bg-coffee-light p-6 rounded-lg">
-                <p className="text-coffee-brown font-semibold mb-2">ZICOFE</p>
+                <p className="text-gray-800 font-semibold mb-2">ZICOFE</p>
                 <p className="text-gray-700">Email: privacy@zicofe.com</p>
                 <p className="text-gray-700">Address: Uganda</p>
               </div>

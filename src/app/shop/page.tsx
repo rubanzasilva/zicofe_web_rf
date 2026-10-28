@@ -135,7 +135,7 @@ const ShopPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-coffee-light">
       <Header />
 
       <main className="py-12">
@@ -154,7 +154,7 @@ const ShopPage = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-coffee-brown mb-4">
               Place Your Order
             </h1>
-            <p className="text-xl text-coffee-brown max-w-2xl mx-auto">
+            <p className="text-xl text-gray-800 max-w-2xl mx-auto">
               Fill in your coffee requirements and we'll get back to you with a quote
             </p>
           </div>
@@ -411,21 +411,21 @@ const ShopPage = () => {
                     {coffeeType && (
                       <div>
                         <p className="text-sm text-gray-600">Coffee Type</p>
-                        <p className="font-semibold text-coffee-brown capitalize">{coffeeType}</p>
+                        <p className="font-semibold text-gray-800 capitalize">{coffeeType}</p>
                       </div>
                     )}
 
                     {coffeeGrade && (
                       <div>
                         <p className="text-sm text-gray-600">Grade</p>
-                        <p className="font-semibold text-coffee-brown">{coffeeGrade}</p>
+                        <p className="font-semibold text-gray-800">{coffeeGrade}</p>
                       </div>
                     )}
 
                     {quantity && parseFloat(quantity) > 0 && (
                       <div>
                         <p className="text-sm text-gray-600">Quantity</p>
-                        <p className="font-semibold text-coffee-brown">
+                        <p className="font-semibold text-gray-800">
                           {getTotalKg().toFixed(2)} KG
                         </p>
                         <p className="text-sm text-gray-600">
@@ -436,7 +436,7 @@ const ShopPage = () => {
 
                     <div className="pt-4 border-t border-gray-200">
                       <p className="text-sm text-gray-600 mb-2">Pricing</p>
-                      <p className="text-coffee-brown">
+                      <p className="text-gray-800">
                         Contact us for current pricing and availability
                       </p>
                     </div>

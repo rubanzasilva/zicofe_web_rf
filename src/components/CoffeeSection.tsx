@@ -25,7 +25,7 @@ const CoffeeSection = () => {
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-coffee-brown mb-4">Green Coffee Beans</h2>
-          <p className="text-xl text-coffee-brown max-w-3xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
             We export high-quality green coffee beans to all parts of the world
           </p>
         </div>
@@ -61,7 +61,7 @@ const CoffeeSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-coffee-brown mb-2">{bean.name}</h3>
-                  <p className="text-coffee-brown mb-4">{bean.description}</p>
+                  <p className="text-gray-800 mb-4">{bean.description}</p>
                   <button className="flex items-center text-coffee-brown font-medium hover:text-coffee-dark">
                     Learn More <ChevronRight size={16} className="ml-1" />
                   </button>
@@ -86,7 +86,7 @@ const CoffeeSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-coffee-brown mb-2">{bean.name}</h3>
-                  <p className="text-coffee-brown mb-4">{bean.description}</p>
+                  <p className="text-gray-800 mb-4">{bean.description}</p>
                   <button className="flex items-center text-coffee-brown font-medium hover:text-coffee-dark">
                     Learn More <ChevronRight size={16} className="ml-1" />
                   </button>
@@ -104,7 +104,7 @@ const CoffeeSection = () => {
           >
             View All Products <ChevronRight size={20} className="ml-2" />
           </Link>
-          <p className="text-coffee-brown mt-4">
+          <p className="text-gray-800 mt-4">
             Browse our complete catalog of {activeTab === 0 ? '7 Robusta' : '6 Arabica'} varieties
           </p>
         </div>

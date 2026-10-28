@@ -91,15 +91,15 @@ const CookieConsent = () => {
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div className="flex-1 text-coffee-brown">
                 <h3 className="text-lg font-semibold mb-2">Cookie Consent</h3>
-                <p className="text-sm md:text-base">
+                <p className="text-sm md:text-base text-gray-800">
                   We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
                   By clicking "Accept All", you consent to our use of cookies. You can customize your preferences by clicking "Cookie Settings".
                   {' '}
-                  <a href="/privacy-policy" className="underline hover:text-coffee-dark">
+                  <a href="/privacy-policy" className="text-coffee-brown underline hover:text-coffee-dark">
                     Privacy Policy
                   </a>
                   {' '}|{' '}
-                  <a href="/cookie-policy" className="underline hover:text-coffee-dark">
+                  <a href="/cookie-policy" className="text-coffee-brown underline hover:text-coffee-dark">
                     Cookie Policy
                   </a>
                 </p>

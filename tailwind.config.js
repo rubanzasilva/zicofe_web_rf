@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       colors: {
         'coffee-light': '#f7f2ef',
-        'coffee-dark': '#251804',
-        'coffee-medium': '#453624',
-        'coffee-brown': '#35241a', // New color for better visibility
+        'coffee-dark': '#153C1D',
+        'coffee-medium': '#194723',
+        // Keep the existing token name for components using the brand primary color.
+        'coffee-brown': '#1F562A',
       },
       container: {
         center: true,

@@ -21,7 +21,7 @@ const WashedProcessingSection = () => {
       buttonText="Learn More About Washed Processing"
       images={images}
       imagePosition="right"
-      backgroundColor="bg-white"
+      backgroundColor="bg-coffee-light"
     />
   );
 };

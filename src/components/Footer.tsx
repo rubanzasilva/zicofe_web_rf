@@ -5,16 +5,29 @@ import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin, You
 
 const Footer = () => {
   return (
-    <footer className="bg-coffee-brown text-white py-12">
-      <div className="container">
+    <footer className="relative overflow-hidden bg-coffee-brown text-white py-12">
+      {/* Photo: Zigoti Coffee Uganda Nicole Motteux (34).jpg, supplied via Google Drive. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <Image
+          src="/images/footer-coffee-cherries.webp"
+          alt=""
+          fill
+          unoptimized
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-coffee-brown/[0.85]" />
+      </div>
+      <div className="container relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Image
-              src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/icon.png"
+              src="/images/zcw-logo-nbg.png"
+              unoptimized
               alt="ZICOFE Logo"
-              width={150}
-              height={50}
-              className="h-12 w-auto mb-4"
+              width={1584}
+              height={993}
+              className="h-auto w-44 rounded-lg mb-4"
             />
             <p className="text-gray-200 mb-4">
               Inspiring change, one bean at a time since 1984.

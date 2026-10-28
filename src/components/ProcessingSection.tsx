@@ -18,7 +18,7 @@ const ProcessingSection: React.FC<ProcessingSectionProps> = ({
   buttonText,
   images,
   imagePosition,
-  backgroundColor = 'bg-gray-50'
+  backgroundColor = 'bg-coffee-light'
 }) => {
   return (
     <section className={`py-20 ${backgroundColor}`}>
@@ -39,7 +39,7 @@ const ProcessingSection: React.FC<ProcessingSectionProps> = ({
               {title}
             </h2>
 
-            <div className="space-y-4 text-coffee-brown text-lg mb-8">
+            <div className="space-y-4 text-gray-800 text-lg mb-8">
               {description.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
