@@ -34,13 +34,13 @@ const CoffeeSection = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
           <button 
             onClick={() => setActiveTab(0)}
-            className={`px-6 py-3 rounded-md transition-colors font-medium ${activeTab === 0 ? 'bg-coffee-brown text-white' : 'bg-white text-coffee-brown border border-coffee-brown'}`}
+            className={`px-6 py-3 rounded-sm transition-colors font-medium ${activeTab === 0 ? 'bg-coffee-brown text-white' : 'bg-white text-coffee-brown border border-coffee-brown'}`}
           >
             Robusta Varieties
           </button>
           <button 
             onClick={() => setActiveTab(1)}
-            className={`px-6 py-3 rounded-md transition-colors font-medium ${activeTab === 1 ? 'bg-coffee-brown text-white' : 'bg-white text-coffee-brown border border-coffee-brown'}`}
+            className={`px-6 py-3 rounded-sm transition-colors font-medium ${activeTab === 1 ? 'bg-coffee-brown text-white' : 'bg-white text-coffee-brown border border-coffee-brown'}`}
           >
             Arabica Varieties
           </button>
@@ -100,7 +100,7 @@ const CoffeeSection = () => {
         <div className="text-center mt-12">
           <Link
             href="/products"
-            className="inline-flex items-center bg-coffee-brown text-white px-8 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium"
+            className="inline-flex items-center bg-coffee-brown text-white px-8 py-3 rounded-sm hover:bg-coffee-dark transition-colors font-medium"
           >
             View All Products <ChevronRight size={20} className="ml-2" />
           </Link>

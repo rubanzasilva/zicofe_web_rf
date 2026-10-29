@@ -202,7 +202,7 @@ export default function PrivacyPolicyPage() {
           <div className="mt-12 pt-8 border-t border-gray-200">
             <a
               href="/"
-              className="inline-block px-6 py-3 bg-coffee-brown text-white rounded-md hover:bg-coffee-dark transition-colors"
+              className="inline-block px-6 py-3 bg-coffee-brown text-white rounded-sm hover:bg-coffee-dark transition-colors"
             >
               Back to Home
             </a>

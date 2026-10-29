@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="absolute inset-0 bg-coffee-brown/[0.85]" />
       </div>
       <div className="container relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(4,minmax(0,1fr))] gap-x-8 gap-y-10">
           <div>
             <Image
               src="/images/zcw-logo-nbg.png"
@@ -92,7 +92,9 @@ const Footer = () => {
               <li><Link href="/#impact" className="text-gray-200 hover:text-white transition-colors">Our Impact</Link></li>
               <li><Link href="/#contact" className="text-gray-200 hover:text-white transition-colors">Contact</Link></li>
             </ul>
-            <h4 className="text-lg font-semibold mb-4 mt-6">Legal</h4>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li><Link href="/privacy-policy" className="text-gray-200 hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/cookie-policy" className="text-gray-200 hover:text-white transition-colors">Cookie Policy</Link></li>
@@ -118,22 +120,6 @@ const Footer = () => {
                 <span className="text-gray-200">Monday - Saturday: 8:00 AM - 5:00 PM</span>
               </li>
             </ul>
-          </div>
-          <div className="lg:ml-8">
-            <h4 className="text-lg font-semibold mb-4">Newsletter</h4>
-            <p className="text-gray-200 mb-4">
-              Subscribe to get updates on new products and offers.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="px-4 py-2 rounded-l-md w-full text-coffee-brown focus:outline-none"
-              />
-              <button className="bg-coffee-dark hover:bg-coffee-medium px-4 py-2 rounded-r-md transition-colors">
-                Subscribe
-              </button>
-            </div>
           </div>
         </div>
       </div>

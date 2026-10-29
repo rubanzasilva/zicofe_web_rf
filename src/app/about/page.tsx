@@ -479,10 +479,10 @@ const AboutPage = () => {
               more about our work, we'd love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/#contact" className="bg-coffee-brown text-white px-8 py-3 rounded-md hover:bg-coffee-dark transition-colors">
+              <a href="/#contact" className="bg-coffee-brown text-white px-8 py-3 rounded-sm hover:bg-coffee-dark transition-colors">
                 Get In Touch
               </a>
-              <a href="/#beans" className="border border-coffee-brown text-coffee-brown px-8 py-3 rounded-md hover:bg-white transition-colors">
+              <a href="/#beans" className="border border-coffee-brown text-coffee-brown px-8 py-3 rounded-sm hover:bg-white transition-colors">
                 View Our Coffee
               </a>
             </div>

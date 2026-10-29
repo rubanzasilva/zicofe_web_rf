@@ -45,7 +45,7 @@ const ProcessingSection: React.FC<ProcessingSectionProps> = ({
               ))}
             </div>
 
-            <button className="inline-flex items-center px-8 py-3 border-2 border-coffee-brown text-coffee-brown font-medium rounded-md hover:bg-coffee-brown hover:text-white transition-all duration-300 group">
+            <button className="inline-flex items-center px-8 py-3 border-2 border-coffee-brown text-coffee-brown font-medium rounded-sm hover:bg-coffee-brown hover:text-white transition-all duration-300 group">
               {buttonText}
               <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </button>

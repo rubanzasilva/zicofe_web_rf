@@ -371,7 +371,7 @@ const ShopPage = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-coffee-brown text-white px-8 py-4 rounded-md hover:bg-coffee-dark transition-colors font-semibold text-lg disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center"
+                  className="w-full bg-coffee-brown text-white px-8 py-4 rounded-sm hover:bg-coffee-dark transition-colors font-semibold text-lg disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>

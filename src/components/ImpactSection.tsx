@@ -66,13 +66,13 @@ const ImpactSection = () => {
                 {initiative.href ? (
                   <a
                     href={initiative.href}
-                    className="inline-flex items-center justify-center w-full bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium"
+                    className="inline-flex items-center justify-center w-full bg-coffee-brown text-white px-6 py-3 rounded-sm hover:bg-coffee-dark transition-colors font-medium"
                     aria-label={`Learn more about ${initiative.title}`}
                   >
                     Learn more <ArrowRight size={16} className="ml-2" />
                   </a>
                 ) : (
-                  <button className="inline-flex items-center justify-center w-full bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors font-medium">
+                  <button className="inline-flex items-center justify-center w-full bg-coffee-brown text-white px-6 py-3 rounded-sm hover:bg-coffee-dark transition-colors font-medium">
                     Learn more <ArrowRight size={16} className="ml-2" />
                   </button>
                 )}

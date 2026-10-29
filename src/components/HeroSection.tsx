@@ -60,10 +60,10 @@ const HeroSection = () => {
             Renowned for our top-quality Robusta coffee, Zigoti has drawn attention and respect from specialty coffee traders and consumers worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => scrollToSection('about')} className="bg-coffee-dark text-white px-8 py-3 rounded-md hover:bg-coffee-brown transition-colors shadow-lg">
+            <button onClick={() => scrollToSection('about')} className="bg-coffee-dark text-white px-8 py-3 rounded-sm hover:bg-coffee-brown transition-colors shadow-lg">
               Our Story
             </button>
-            <button onClick={() => scrollToSection('beans')} className="border-2 border-white text-white px-8 py-3 rounded-md hover:bg-white/20 transition-colors shadow-lg backdrop-blur-sm">
+            <button onClick={() => scrollToSection('beans')} className="border-2 border-white text-white px-8 py-3 rounded-sm hover:bg-white/20 transition-colors shadow-lg backdrop-blur-sm">
               View Products
             </button>
           </div>

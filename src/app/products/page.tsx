@@ -117,13 +117,13 @@ const ProductsPage = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <button
               onClick={() => setActiveTab(0)}
-              className={`px-6 py-3 rounded-md transition-colors font-medium ${activeTab === 0 ? 'bg-coffee-brown text-white' : 'bg-white text-coffee-brown border border-coffee-brown'}`}
+              className={`px-6 py-3 rounded-sm transition-colors font-medium ${activeTab === 0 ? 'bg-coffee-brown text-white' : 'bg-white text-coffee-brown border border-coffee-brown'}`}
             >
               Robusta Varieties ({robustaProducts.length})
             </button>
             <button
               onClick={() => setActiveTab(1)}
-              className={`px-6 py-3 rounded-md transition-colors font-medium ${activeTab === 1 ? 'bg-coffee-brown text-white' : 'bg-white text-coffee-brown border border-coffee-brown'}`}
+              className={`px-6 py-3 rounded-sm transition-colors font-medium ${activeTab === 1 ? 'bg-coffee-brown text-white' : 'bg-white text-coffee-brown border border-coffee-brown'}`}
             >
               Arabica Varieties ({arabicaProducts.length})
             </button>
@@ -245,10 +245,10 @@ const ProductsPage = () => {
               We're here to help you find the perfect coffee beans for your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/#contact" className="bg-coffee-brown text-white px-8 py-3 rounded-md hover:bg-coffee-dark transition-colors">
+              <a href="/#contact" className="bg-coffee-brown text-white px-8 py-3 rounded-sm hover:bg-coffee-dark transition-colors">
                 Contact Us
               </a>
-              <a href="/about" className="border border-coffee-brown text-coffee-brown px-8 py-3 rounded-md hover:bg-coffee-light transition-colors">
+              <a href="/about" className="border border-coffee-brown text-coffee-brown px-8 py-3 rounded-sm hover:bg-coffee-light transition-colors">
                 Learn About Us
               </a>
             </div>

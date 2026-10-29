@@ -40,7 +40,7 @@ const AboutSection = () => {
             </p>
             <Link
               href="/about"
-              className="inline-block bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors"
+              className="inline-block bg-coffee-brown text-white px-6 py-3 rounded-sm hover:bg-coffee-dark transition-colors"
             >
               Read Our Full Story
             </Link>

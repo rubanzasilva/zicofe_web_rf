@@ -107,19 +107,19 @@ const CookieConsent = () => {
               <div className="flex flex-wrap gap-3 flex-shrink-0">
                 <button
                   onClick={() => setShowSettings(true)}
-                  className="px-4 py-2 border border-coffee-brown text-coffee-brown rounded-md hover:bg-coffee-light transition-colors text-sm md:text-base whitespace-nowrap"
+                  className="px-4 py-2 border border-coffee-brown text-coffee-brown rounded-sm hover:bg-coffee-light transition-colors text-sm md:text-base whitespace-nowrap"
                 >
                   Cookie Settings
                 </button>
                 <button
                   onClick={acceptNecessary}
-                  className="px-4 py-2 border border-coffee-brown text-coffee-brown rounded-md hover:bg-coffee-light transition-colors text-sm md:text-base whitespace-nowrap"
+                  className="px-4 py-2 border border-coffee-brown text-coffee-brown rounded-sm hover:bg-coffee-light transition-colors text-sm md:text-base whitespace-nowrap"
                 >
                   Necessary Only
                 </button>
                 <button
                   onClick={acceptAll}
-                  className="px-6 py-2 bg-coffee-brown text-white rounded-md hover:bg-coffee-dark transition-colors text-sm md:text-base whitespace-nowrap"
+                  className="px-6 py-2 bg-coffee-brown text-white rounded-sm hover:bg-coffee-dark transition-colors text-sm md:text-base whitespace-nowrap"
                 >
                   Accept All
                 </button>
@@ -208,19 +208,19 @@ const CookieConsent = () => {
               <div className="flex flex-wrap gap-3 justify-end pt-4 border-t">
                 <button
                   onClick={() => setShowSettings(false)}
-                  className="px-6 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors text-sm md:text-base"
+                  className="px-6 py-2 border border-gray-300 text-gray-700 rounded-sm hover:bg-gray-50 transition-colors text-sm md:text-base"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={acceptNecessary}
-                  className="px-6 py-2 border border-coffee-brown text-coffee-brown rounded-md hover:bg-coffee-light transition-colors text-sm md:text-base"
+                  className="px-6 py-2 border border-coffee-brown text-coffee-brown rounded-sm hover:bg-coffee-light transition-colors text-sm md:text-base"
                 >
                   Necessary Only
                 </button>
                 <button
                   onClick={saveCustomPreferences}
-                  className="px-6 py-2 bg-coffee-brown text-white rounded-md hover:bg-coffee-dark transition-colors text-sm md:text-base"
+                  className="px-6 py-2 bg-coffee-brown text-white rounded-sm hover:bg-coffee-dark transition-colors text-sm md:text-base"
                 >
                   Save Preferences
                 </button>
