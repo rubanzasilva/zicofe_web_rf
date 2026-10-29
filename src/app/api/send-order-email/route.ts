@@ -1,141 +1,93 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import { validateOrder } from '../../../lib/order';
 
 export async function POST(req: NextRequest) {
+  let body: unknown;
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    const body = await req.json();
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Please provide a valid order.' }, { status: 400 });
+  }
 
-    const {
-      unit,
-      quantity,
-      coffeeType,
-      coffeeGrade,
-      fullName,
-      email,
-      phone,
-      company,
-      address,
-      notes
-    } = body;
+  let order;
+  try {
+    order = validateOrder(body);
+  } catch (error) {
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : 'Please check your order details.' },
+      { status: 400 }
+    );
+  }
 
-    // Validate required fields
-    if (!quantity || !coffeeType || !coffeeGrade || !fullName || !email || !phone || !address) {
+  const recipient = process.env.FORMSUBMIT_EMAIL?.trim() || 'silva@zicofe.com';
+  const totalKg = order.unit === 'kg' ? order.quantity : order.quantity * 60;
+  const totalBags = order.unit === 'bags' ? order.quantity : order.quantity / 60;
+  const pageUrl = `${req.nextUrl.origin}/shop`;
+
+  try {
+    const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Referer: pageUrl,
+        Origin: req.nextUrl.origin,
+      },
+      signal: AbortSignal.timeout(15000),
+      body: JSON.stringify({
+        name: order.fullName,
+        email: order.email,
+        phone: order.phone,
+        company: order.company || 'Not provided',
+        coffee_type: order.coffeeType === 'arabica' ? 'Arabica' : 'Robusta',
+        coffee_grade: order.coffeeGrade,
+        quantity: `${order.quantity} ${order.unit}`,
+        total_kilograms: totalKg.toFixed(2),
+        total_bags: totalBags.toFixed(2),
+        delivery_address: order.address,
+        notes: order.notes || 'None',
+        _subject: `New ZICOFE Coffee Order Request from ${order.fullName.replace(/[\r\n]/g, ' ')}`,
+        _replyto: order.email,
+        _template: 'table',
+        _captcha: 'false',
+        _url: pageUrl,
+      }),
+    });
+    const result = await response.json().catch(() => null);
+
+    if (response.status >= 500 || response.status === 429 || !result) {
+      console.error('FormSubmit is unavailable:', response.status);
       return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
+        { error: 'Our order email service is temporarily unavailable. Please try again shortly or contact our sales team.' },
+        { status: 503 }
       );
     }
 
-    // Calculate totals
-    const totalKg = unit === 'kg' ? parseFloat(quantity) : parseFloat(quantity) * 60;
-    const totalBags = unit === 'bags' ? parseFloat(quantity) : parseFloat(quantity) / 60;
+    const message = typeof result.message === 'string' ? result.message : '';
+    if (/activat|confirm your email/i.test(message)) {
+      console.error('FormSubmit requires inbox activation. Check the receiving inbox for its confirmation email.');
+      return NextResponse.json(
+        { error: 'Online ordering is awaiting email activation. Please contact our sales team to place your order.' },
+        { status: 503 }
+      );
+    }
 
-    // Create email HTML
-    const emailHtml = `
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background-color: #4a2c2a; color: white; padding: 20px; text-align: center; }
-            .content { background-color: #f9f9f9; padding: 20px; }
-            .section { margin-bottom: 20px; }
-            .section-title { font-weight: bold; color: #4a2c2a; margin-bottom: 10px; font-size: 16px; }
-            .info-row { padding: 8px 0; border-bottom: 1px solid #e0e0e0; }
-            .label { font-weight: bold; color: #666; }
-            .value { color: #333; }
-            .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <div class="header">
-              <h1>New Coffee Order Request</h1>
-            </div>
+    // FormSubmit can return its success flag as a string.
+    if (!response.ok || (result?.success !== true && result?.success !== 'true')) {
+      console.error('FormSubmit rejected the order request:', response.status);
+      return NextResponse.json(
+        { error: 'Your order request could not be sent. Please try again or contact our sales team.' },
+        { status: 502 }
+      );
+    }
 
-            <div class="content">
-              <div class="section">
-                <div class="section-title">Order Details</div>
-                <div class="info-row">
-                  <span class="label">Coffee Type:</span>
-                  <span class="value">${coffeeType.charAt(0).toUpperCase() + coffeeType.slice(1)}</span>
-                </div>
-                <div class="info-row">
-                  <span class="label">Coffee Grade:</span>
-                  <span class="value">${coffeeGrade}</span>
-                </div>
-                <div class="info-row">
-                  <span class="label">Quantity:</span>
-                  <span class="value">${totalKg.toFixed(2)} KG (${totalBags.toFixed(2)} bags)</span>
-                </div>
-              </div>
-
-              <div class="section">
-                <div class="section-title">Customer Information</div>
-                <div class="info-row">
-                  <span class="label">Full Name:</span>
-                  <span class="value">${fullName}</span>
-                </div>
-                <div class="info-row">
-                  <span class="label">Email:</span>
-                  <span class="value">${email}</span>
-                </div>
-                <div class="info-row">
-                  <span class="label">Phone:</span>
-                  <span class="value">${phone}</span>
-                </div>
-                ${company ? `
-                <div class="info-row">
-                  <span class="label">Company:</span>
-                  <span class="value">${company}</span>
-                </div>
-                ` : ''}
-                <div class="info-row">
-                  <span class="label">Delivery Address:</span>
-                  <span class="value">${address.replace(/\n/g, '<br>')}</span>
-                </div>
-              </div>
-
-              ${notes ? `
-              <div class="section">
-                <div class="section-title">Additional Notes</div>
-                <div class="info-row">
-                  <span class="value">${notes.replace(/\n/g, '<br>')}</span>
-                </div>
-              </div>
-              ` : ''}
-            </div>
-
-            <div class="footer">
-              <p>This order was submitted through the ZICOFE website</p>
-              <p>Please respond to the customer within 24 hours</p>
-            </div>
-          </div>
-        </body>
-      </html>
-    `;
-
-    // Send email using Resend
-    const data = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
-      to: process.env.RESEND_TO_EMAIL || 'orders@zicofe.com',
-      replyTo: email,
-      subject: `New Coffee Order Request from ${fullName}`,
-      html: emailHtml,
-    });
-
+    return NextResponse.json({ success: true, message: 'Order submitted successfully' });
+  } catch (error) {
+    const reason = error instanceof Error ? error.name : 'UnknownError';
+    console.error('FormSubmit could not be reached:', reason);
     return NextResponse.json(
-      { success: true, message: 'Order submitted successfully', data },
-      { status: 200 }
-    );
-
-  } catch (error: any) {
-    console.error('Error sending email:', error);
-    return NextResponse.json(
-      { error: 'Failed to submit order', details: error.message },
-      { status: 500 }
+      { error: 'Our order email service could not be reached. Please try again shortly or contact our sales team.' },
+      { status: 503 }
     );
   }
 }

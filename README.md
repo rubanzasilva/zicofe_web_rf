@@ -8,24 +8,25 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 npm install
 ```
 
-### 2. Configure Email Service
+### 2. Activate Order Emails
 
-This project uses [Resend](https://resend.com) for sending order emails. Follow these steps to set it up:
+The Shop Now form sends order requests through [FormSubmit](https://formsubmit.co/). No account, API key, or verified sending domain is required.
 
-1. Create a free account at [https://resend.com](https://resend.com)
-2. Get your API key from [https://resend.com/api-keys](https://resend.com/api-keys)
-3. Copy `.env.example` to `.env.local`:
-   ```bash
-   cp .env.example .env.local
-   ```
-4. Edit `.env.local` and add your configuration:
-   ```
-   RESEND_API_KEY=re_your_actual_api_key
-   RESEND_FROM_EMAIL=onboarding@resend.dev  # Use this for testing
-   RESEND_TO_EMAIL=your-email@example.com   # Where to receive orders
-   ```
+Orders go to **silva@zicofe.com** by default. To use a different inbox, set `FORMSUBMIT_EMAIL` in `.env.local` and in your hosting provider's server environment:
 
-Note: For production, you'll need to verify your domain in Resend and update `RESEND_FROM_EMAIL` accordingly.
+```env
+FORMSUBMIT_EMAIL=silva@zicofe.com
+```
+
+1. Start the site and submit a clearly marked test order through `/shop`.
+2. Open the FormSubmit activation email in the receiving inbox (check spam too) and confirm it.
+3. Submit another test order and verify it arrives with the coffee details, quantity, customer contacts, delivery address, and notes. Replying to the notification addresses the customer.
+
+The first submission triggers activation; forwarding starts after confirmation. Repeat activation when changing inboxes, if requested. Restart or redeploy after changing environment variables. Old `RESEND_*` settings are no longer used.
+
+The form stays on the page during submission. Requests are validated on both client and server, and only FormSubmit acceptance produces a success message. If the service fails or times out, the customer's entries remain in the form with email and WhatsApp contact links. FormSubmit acceptance does not confirm inbox delivery. This AJAX integration uses FormSubmit's table email template with CAPTCHA disabled.
+
+Run `npm test` to check form radio grouping, order validation, notification details, and FormSubmit success and failure handling without sending real emails.
 
 ### 3. Run the Development Server
 

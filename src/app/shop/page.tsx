@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { ArrowLeft, ShoppingCart, AlertCircle } from 'lucide-react';
+import { coffeeGrades, validateOrder } from '../../lib/order';
 
 const ShopPage = () => {
   // Form state
@@ -19,26 +20,6 @@ const ShopPage = () => {
   const [notes, setNotes] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
-
-  // Coffee grade options based on type
-  const robustaGrades = [
-    'Natural Uganda Screen 1800',
-    'Natural Uganda Robusta Screen 1500',
-    'Natural Uganda Robusta Screen 1200',
-    'BHP 1199',
-    'Black Beans',
-    'Natural Uganda Robusta Screen 1700+',
-    'Washed Uganda Robusta Screen 1500+'
-  ];
-
-  const arabicaGrades = [
-    'AA',
-    'AB',
-    'CPB',
-    'Wugar',
-    'A',
-    'Dry Processed Uganda Arabica'
-  ];
 
   // Reset grade when coffee type changes
   useEffect(() => {
@@ -75,6 +56,14 @@ const ShopPage = () => {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    let order;
+    try {
+      order = validateOrder({ unit, quantity, coffeeType, coffeeGrade, fullName, email, phone, company, address, notes });
+    } catch (error) {
+      setSubmitMessage({ type: 'error', text: error instanceof Error ? error.message : 'Please check your order details.' });
+      return;
+    }
     setIsSubmitting(true);
     setSubmitMessage(null);
 
@@ -84,23 +73,12 @@ const ShopPage = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          unit,
-          quantity,
-          coffeeType,
-          coffeeGrade,
-          fullName,
-          email,
-          phone,
-          company,
-          address,
-          notes,
-        }),
+        body: JSON.stringify(order),
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => null);
 
-      if (response.ok) {
+      if (response.ok && data?.success === true) {
         setSubmitMessage({
           type: 'success',
           text: 'Thank you! Your order request has been received. We will contact you shortly with a quote.'
@@ -120,7 +98,7 @@ const ShopPage = () => {
       } else {
         setSubmitMessage({
           type: 'error',
-          text: data.error || 'Failed to submit order. Please try again or contact us directly.'
+          text: data?.error || 'Failed to submit order. Please try again or contact us directly.'
         });
       }
     } catch (error) {
@@ -190,6 +168,7 @@ const ShopPage = () => {
                     <label className="flex items-center cursor-pointer">
                       <input
                         type="radio"
+                        name="unit"
                         value="kg"
                         checked={unit === 'kg'}
                         onChange={(e) => setUnit(e.target.value as 'kg')}
@@ -200,6 +179,7 @@ const ShopPage = () => {
                     <label className="flex items-center cursor-pointer">
                       <input
                         type="radio"
+                        name="unit"
                         value="bags"
                         checked={unit === 'bags'}
                         onChange={(e) => setUnit(e.target.value as 'bags')}
@@ -236,6 +216,7 @@ const ShopPage = () => {
                     <label className="flex items-center cursor-pointer">
                       <input
                         type="radio"
+                        name="coffeeType"
                         value="arabica"
                         checked={coffeeType === 'arabica'}
                         onChange={(e) => setCoffeeType(e.target.value as 'arabica')}
@@ -247,6 +228,7 @@ const ShopPage = () => {
                     <label className="flex items-center cursor-pointer">
                       <input
                         type="radio"
+                        name="coffeeType"
                         value="robusta"
                         checked={coffeeType === 'robusta'}
                         onChange={(e) => setCoffeeType(e.target.value as 'robusta')}
@@ -271,7 +253,7 @@ const ShopPage = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
                     >
                       <option value="">Select a grade...</option>
-                      {(coffeeType === 'robusta' ? robustaGrades : arabicaGrades).map((grade) => (
+                      {coffeeGrades[coffeeType].map((grade) => (
                         <option key={grade} value={grade}>
                           {grade}
                         </option>
@@ -388,12 +370,18 @@ const ShopPage = () => {
 
                 {/* Success/Error Message */}
                 {submitMessage && (
-                  <div className={`mt-6 p-4 rounded-md ${
+                  <div role={submitMessage.type === 'error' ? 'alert' : 'status'} className={`mt-6 p-4 rounded-md ${
                     submitMessage.type === 'success'
                       ? 'bg-green-50 text-green-800 border border-green-200'
                       : 'bg-red-50 text-red-800 border border-red-200'
                   }`}>
                     {submitMessage.text}
+                    {submitMessage.type === 'error' && (
+                      <p className="mt-2">
+                        You can also <a href="mailto:sales@zicofe.com" className="underline">email sales@zicofe.com</a> or{' '}
+                        <a href="https://wa.me/256752028886" target="_blank" rel="noopener noreferrer" className="underline">message us on WhatsApp</a>.
+                      </p>
+                    )}
                   </div>
                 )}
               </form>
