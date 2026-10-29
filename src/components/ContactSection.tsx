@@ -35,7 +35,7 @@ const ContactSection = () => {
       <div className="container">
         <div className="mb-12 text-center">
           <h2 id="contact-heading" className="mb-4 text-4xl font-bold">Contact Us</h2>
-          <p className="mx-auto max-w-3xl text-xl">
+          <p className="mx-auto max-w-3xl text-xl text-charcoal">
             Reach out to us for inquiries, orders, or partnerships
           </p>
         </div>
@@ -48,7 +48,7 @@ const ContactSection = () => {
                 </div>
                 <div className="min-w-0">
                   <h3 className="mb-1 text-xl font-semibold">{title}</h3>
-                  <p className="mb-3 hidden text-sm text-coffee-medium md:block">{hint}</p>
+                  <p className="mb-3 hidden text-sm text-charcoal md:block">{hint}</p>
                   <div className="space-y-1 break-words">
                     {details.map(({ label, href: detailHref }) => (
                       detailHref ? (
@@ -61,7 +61,7 @@ const ContactSection = () => {
                         >
                           {label}
                         </a>
-                      ) : <p key={label}>{label}</p>
+                      ) : <p className="text-charcoal" key={label}>{label}</p>
                     ))}
                   </div>
                 </div>

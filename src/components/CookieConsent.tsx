@@ -91,7 +91,7 @@ const CookieConsent = () => {
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div className="flex-1 text-coffee-brown">
                 <h3 className="text-lg font-semibold mb-2">Cookie Consent</h3>
-                <p className="text-sm md:text-base">
+                <p className="text-sm md:text-base text-charcoal">
                   We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
                   By clicking "Accept All", you consent to our use of cookies. You can customize your preferences by clicking "Cookie Settings".
                   {' '}
@@ -135,7 +135,7 @@ const CookieConsent = () => {
           <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <h2 className="text-2xl font-bold text-coffee-brown mb-4">Cookie Preferences</h2>
-              <p className="text-gray-700 mb-6">
+              <p className="text-charcoal mb-6">
                 We use cookies to improve your experience on our website. You can choose which types of cookies to allow.
                 Please note that necessary cookies are required for the website to function properly.
               </p>

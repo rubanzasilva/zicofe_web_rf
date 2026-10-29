@@ -132,7 +132,7 @@ const ShopPage = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-coffee-brown mb-4">
               Place Your Order
             </h1>
-            <p className="text-xl text-coffee-brown max-w-2xl mx-auto">
+            <p className="text-xl text-charcoal max-w-2xl mx-auto">
               Fill in your coffee requirements and we'll get back to you with a quote
             </p>
           </div>
@@ -159,7 +159,7 @@ const ShopPage = () => {
 
                 {/* 1. Quantity Section */}
                 <div className="mb-8">
-                  <label className="block text-lg font-semibold text-coffee-brown mb-4">
+                  <label className="block text-lg font-semibold text-charcoal mb-4">
                     Quantity <span className="text-red-500">*</span>
                   </label>
 
@@ -199,7 +199,7 @@ const ShopPage = () => {
                       min="1"
                       step="any"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-charcoal"
                     />
                     {getConversion() && (
                       <p className="text-sm text-gray-600 mt-2">{getConversion()}</p>
@@ -209,7 +209,7 @@ const ShopPage = () => {
 
                 {/* 2. Coffee Type Section */}
                 <div className="mb-8">
-                  <label className="block text-lg font-semibold text-coffee-brown mb-4">
+                  <label className="block text-lg font-semibold text-charcoal mb-4">
                     Coffee Type <span className="text-red-500">*</span>
                   </label>
                   <div className="flex gap-6">
@@ -243,14 +243,14 @@ const ShopPage = () => {
                 {/* 3. Coffee Grade Section */}
                 {coffeeType && (
                   <div className="mb-8">
-                    <label className="block text-lg font-semibold text-coffee-brown mb-4">
+                    <label className="block text-lg font-semibold text-charcoal mb-4">
                       Coffee Grade <span className="text-red-500">*</span>
                     </label>
                     <select
                       value={coffeeGrade}
                       onChange={(e) => setCoffeeGrade(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-charcoal"
                     >
                       <option value="">Select a grade...</option>
                       {coffeeGrades[coffeeType].map((grade) => (
@@ -270,7 +270,7 @@ const ShopPage = () => {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-coffee-brown mb-2">
+                      <label className="block text-charcoal mb-2">
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -278,12 +278,12 @@ const ShopPage = () => {
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-charcoal"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-coffee-brown mb-2">
+                      <label className="block text-charcoal mb-2">
                         Email <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -291,12 +291,12 @@ const ShopPage = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-charcoal"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-coffee-brown mb-2">
+                      <label className="block text-charcoal mb-2">
                         Phone Number <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -304,25 +304,25 @@ const ShopPage = () => {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-charcoal"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-coffee-brown mb-2">
+                      <label className="block text-charcoal mb-2">
                         Company Name <span className="text-gray-400">(Optional)</span>
                       </label>
                       <input
                         type="text"
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-charcoal"
                       />
                     </div>
                   </div>
 
                   <div className="mt-4">
-                    <label className="block text-coffee-brown mb-2">
+                    <label className="block text-charcoal mb-2">
                       Delivery Address <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -330,14 +330,14 @@ const ShopPage = () => {
                       onChange={(e) => setAddress(e.target.value)}
                       required
                       rows={3}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-charcoal"
                     />
                   </div>
                 </div>
 
                 {/* 5. Additional Notes */}
                 <div className="mb-8">
-                  <label className="block text-lg font-semibold text-coffee-brown mb-4">
+                  <label className="block text-lg font-semibold text-charcoal mb-4">
                     Additional Notes <span className="text-gray-400">(Optional)</span>
                   </label>
                   <textarea
@@ -345,7 +345,7 @@ const ShopPage = () => {
                     onChange={(e) => setNotes(e.target.value)}
                     rows={4}
                     placeholder="Any special requests or notes about your order..."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-coffee-brown"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-charcoal"
                   />
                 </div>
 
@@ -399,21 +399,21 @@ const ShopPage = () => {
                     {coffeeType && (
                       <div>
                         <p className="text-sm text-gray-600">Coffee Type</p>
-                        <p className="font-semibold text-coffee-brown capitalize">{coffeeType}</p>
+                        <p className="font-semibold text-charcoal capitalize">{coffeeType}</p>
                       </div>
                     )}
 
                     {coffeeGrade && (
                       <div>
                         <p className="text-sm text-gray-600">Grade</p>
-                        <p className="font-semibold text-coffee-brown">{coffeeGrade}</p>
+                        <p className="font-semibold text-charcoal">{coffeeGrade}</p>
                       </div>
                     )}
 
                     {quantity && parseFloat(quantity) > 0 && (
                       <div>
                         <p className="text-sm text-gray-600">Quantity</p>
-                        <p className="font-semibold text-coffee-brown">
+                        <p className="font-semibold text-charcoal">
                           {getTotalKg().toFixed(2)} KG
                         </p>
                         <p className="text-sm text-gray-600">
@@ -424,7 +424,7 @@ const ShopPage = () => {
 
                     <div className="pt-4 border-t border-gray-200">
                       <p className="text-sm text-gray-600 mb-2">Pricing</p>
-                      <p className="text-coffee-brown">
+                      <p className="text-charcoal">
                         Contact us for current pricing and availability
                       </p>
                     </div>

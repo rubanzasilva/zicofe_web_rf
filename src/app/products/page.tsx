@@ -103,7 +103,7 @@ const ProductsPage = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-coffee-brown mb-6">Our Green Coffee Beans</h1>
-            <p className="text-2xl text-coffee-brown">
+            <p className="text-2xl text-charcoal">
               We export premium quality Robusta and Arabica coffee beans to all parts of the world
             </p>
           </div>
@@ -133,7 +133,7 @@ const ProductsPage = () => {
           <div className={activeTab === 0 ? 'block' : 'hidden'}>
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-coffee-brown mb-4">Robusta Coffee Beans</h2>
-              <p className="text-coffee-brown max-w-3xl">
+              <p className="text-charcoal max-w-3xl">
                 Our Robusta varieties are known for their bold flavor, high caffeine content, and exceptional quality.
                 Grown in the fertile soils of central Uganda, these beans are carefully processed to maintain their
                 distinctive characteristics.
@@ -152,7 +152,7 @@ const ProductsPage = () => {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-coffee-brown mb-2">{product.name}</h3>
-                    <p className="text-coffee-brown mb-4">{product.description}</p>
+                    <p className="text-charcoal mb-4">{product.description}</p>
                     <div className="space-y-1 mb-4">
                       {product.specs.map((spec, idx) => (
                         <p key={idx} className="text-sm text-gray-600">• {spec}</p>
@@ -171,7 +171,7 @@ const ProductsPage = () => {
           <div className={activeTab === 1 ? 'block' : 'hidden'}>
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-coffee-brown mb-4">Arabica Coffee Beans</h2>
-              <p className="text-coffee-brown max-w-3xl">
+              <p className="text-charcoal max-w-3xl">
                 Our Arabica varieties offer refined flavors with bright acidity and aromatic complexity.
                 Cultivated at higher altitudes in Uganda's prime coffee-growing regions, these beans deliver
                 the premium quality that specialty coffee buyers seek.
@@ -190,7 +190,7 @@ const ProductsPage = () => {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-coffee-brown mb-2">{product.name}</h3>
-                    <p className="text-coffee-brown mb-4">{product.description}</p>
+                    <p className="text-charcoal mb-4">{product.description}</p>
                     <div className="space-y-1 mb-4">
                       {product.specs.map((spec, idx) => (
                         <p key={idx} className="text-sm text-gray-600">• {spec}</p>
@@ -212,7 +212,7 @@ const ProductsPage = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-coffee-brown mb-6">Quality Assurance</h2>
-            <p className="text-coffee-brown mb-8">
+            <p className="text-charcoal mb-8">
               Every batch of our coffee beans undergoes rigorous quality control processes to ensure
               consistency and excellence. We maintain international standards in processing, grading,
               and packaging to deliver the finest green coffee beans to our customers worldwide.
@@ -220,15 +220,15 @@ const ProductsPage = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div>
                 <div className="text-4xl font-bold text-coffee-brown mb-2">100%</div>
-                <p className="text-coffee-brown">Quality Tested</p>
+                <p className="text-charcoal">Quality Tested</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-coffee-brown mb-2">13</div>
-                <p className="text-coffee-brown">Product Varieties</p>
+                <p className="text-charcoal">Product Varieties</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-coffee-brown mb-2">12K+</div>
-                <p className="text-coffee-brown">Farmer Partners</p>
+                <p className="text-charcoal">Farmer Partners</p>
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@ const ProductsPage = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-coffee-brown mb-6">Ready to Order?</h2>
-            <p className="text-xl text-coffee-brown mb-8">
+            <p className="text-xl text-charcoal mb-8">
               Contact us for pricing, availability, and to discuss your specific requirements.
               We're here to help you find the perfect coffee beans for your needs.
             </p>
