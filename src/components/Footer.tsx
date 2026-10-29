@@ -9,13 +9,13 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="mb-4 w-52 max-w-full">
+            <div className="mb-4 w-36 max-w-full">
               <Image
                 src="/images/zicofe-logo.png"
                 alt="ZICOFE — Zigoti Coffee Works, established 1984"
                 width={1584}
                 height={993}
-                sizes="208px"
+                sizes="144px"
                 className="h-auto w-full"
               />
             </div>
