@@ -21,11 +21,11 @@ const CoffeeSection = () => {
   ];
 
   return (
-    <section id="beans" className="py-20 bg-coffee-light">
+    <section id="beans" className="glass-section py-20">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-coffee-brown mb-4">Green Coffee Beans</h2>
-          <p className="text-xl text-coffee-brown max-w-3xl mx-auto">
+          <p className="text-xl text-charcoal max-w-3xl mx-auto">
             We export high-quality green coffee beans to all parts of the world
           </p>
         </div>
@@ -50,7 +50,7 @@ const CoffeeSection = () => {
         <div className={activeTab === 0 ? 'block' : 'hidden'}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {greenBeans.map((bean, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div key={index} className="glass-card rounded-lg overflow-hidden">
                 <div className="relative h-48 w-full">
                   <Image 
                     src={bean.image} 
@@ -61,7 +61,7 @@ const CoffeeSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-coffee-brown mb-2">{bean.name}</h3>
-                  <p className="text-coffee-brown mb-4">{bean.description}</p>
+                  <p className="text-charcoal mb-4">{bean.description}</p>
                   <button className="flex items-center text-coffee-brown font-medium hover:text-coffee-dark">
                     Learn More <ChevronRight size={16} className="ml-1" />
                   </button>
@@ -75,7 +75,7 @@ const CoffeeSection = () => {
         <div className={activeTab === 1 ? 'block' : 'hidden'}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {arabicaBeans.map((bean, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div key={index} className="glass-card rounded-lg overflow-hidden">
                 <div className="relative h-48 w-full">
                   <Image
                     src={bean.image}
@@ -86,7 +86,7 @@ const CoffeeSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-coffee-brown mb-2">{bean.name}</h3>
-                  <p className="text-coffee-brown mb-4">{bean.description}</p>
+                  <p className="text-charcoal mb-4">{bean.description}</p>
                   <button className="flex items-center text-coffee-brown font-medium hover:text-coffee-dark">
                     Learn More <ChevronRight size={16} className="ml-1" />
                   </button>
@@ -104,7 +104,7 @@ const CoffeeSection = () => {
           >
             View All Products <ChevronRight size={20} className="ml-2" />
           </Link>
-          <p className="text-coffee-brown mt-4">
+          <p className="text-charcoal mt-4">
             Browse our complete catalog of {activeTab === 0 ? '7 Robusta' : '6 Arabica'} varieties
           </p>
         </div>

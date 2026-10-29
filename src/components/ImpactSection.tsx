@@ -27,11 +27,11 @@ const ImpactSection = () => {
   ];
 
   return (
-    <section id="impact" className="py-20 bg-gray-50">
+    <section id="impact" className="glass-section py-20">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-coffee-brown mb-4">Our Initiatives</h2>
-          <p className="text-xl text-coffee-brown max-w-3xl mx-auto">
+          <p className="text-xl text-charcoal max-w-3xl mx-auto">
             Making a positive impact through meaningful programs
           </p>
         </div>
@@ -40,7 +40,7 @@ const ImpactSection = () => {
           {initiatives.map((initiative, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100 flex flex-col"
+              className="glass-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
             >
               {/* Hero Image */}
               <div className="relative h-56 w-full">
@@ -58,7 +58,7 @@ const ImpactSection = () => {
                 <h3 className="text-2xl font-semibold text-coffee-brown mb-4">
                   {initiative.title}
                 </h3>
-                <p className="text-coffee-brown mb-6 flex-grow">
+                <p className="text-charcoal mb-6 flex-grow">
                   {initiative.description}
                 </p>
 

@@ -8,10 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'coffee-light': '#f7f2ef',
-        'coffee-dark': '#251804',
-        'coffee-medium': '#453624',
-        'coffee-brown': '#35241a', // New color for better visibility
+        charcoal: '#2b2b2b',
+        'coffee-light': '#f1f6f0',
+        'coffee-dark': '#163d1e',
+        'coffee-medium': '#3f6145',
+        'coffee-brown': '#20572b', // Brand green; shared across existing theme classes.
       },
       container: {
         center: true,

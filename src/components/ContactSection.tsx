@@ -31,24 +31,24 @@ const contactCards = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-24 bg-coffee-light py-20 text-coffee-brown">
+    <section id="contact" aria-labelledby="contact-heading" className="glass-section scroll-mt-24 py-20 text-coffee-brown">
       <div className="container">
         <div className="mb-12 text-center">
           <h2 id="contact-heading" className="mb-4 text-4xl font-bold">Contact Us</h2>
-          <p className="mx-auto max-w-3xl text-xl">
+          <p className="mx-auto max-w-3xl text-xl text-charcoal">
             Reach out to us for inquiries, orders, or partnerships
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {contactCards.map(({ title, hint, icon: Icon, actionIcon: ActionIcon, details, action, href, primary, external }) => (
-            <article key={title} className="flex min-w-0 flex-col rounded-xl border border-coffee-brown/10 bg-white p-5 lg:p-6">
+            <article key={title} className="glass-card flex min-w-0 flex-col rounded-xl p-5 lg:p-6">
               <div className="mb-5 flex items-start gap-4 md:flex-col md:items-center md:text-center">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-coffee-light md:h-14 md:w-14">
                   <Icon size={24} aria-hidden="true" />
                 </div>
                 <div className="min-w-0">
                   <h3 className="mb-1 text-xl font-semibold">{title}</h3>
-                  <p className="mb-3 hidden text-sm text-coffee-medium md:block">{hint}</p>
+                  <p className="mb-3 hidden text-sm text-charcoal md:block">{hint}</p>
                   <div className="space-y-1 break-words">
                     {details.map(({ label, href: detailHref }) => (
                       detailHref ? (
@@ -61,7 +61,7 @@ const ContactSection = () => {
                         >
                           {label}
                         </a>
-                      ) : <p key={label}>{label}</p>
+                      ) : <p className="text-charcoal" key={label}>{label}</p>
                     ))}
                   </div>
                 </div>

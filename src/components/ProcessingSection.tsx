@@ -41,7 +41,7 @@ const ProcessingSection: React.FC<ProcessingSectionProps> = ({
 
             <div className="space-y-4 text-coffee-brown text-lg mb-8">
               {description.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p className="text-charcoal" key={index}>{paragraph}</p>
               ))}
             </div>
 
