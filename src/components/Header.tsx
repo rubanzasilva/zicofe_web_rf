@@ -5,15 +5,16 @@ import Image from 'next/image';
 const Header = () => {
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm">
-      <div className="container py-4 flex items-center justify-between">
+      <div className="container h-[72px] min-[992px]:h-20 flex items-center justify-between">
         <div className="flex items-center">
-          <Link href="/">
+          <Link href="/" className="block shrink-0">
             <Image
-              src="https://d3q0oijmiduzg2.cloudfront.net/zicofe/icon.png"
+              src="/images/zicofe-logo-navbar.svg"
               alt="ZICOFE Logo"
-              width={150}
-              height={50}
-              className="h-12 w-auto"
+              width={1583}
+              height={993}
+              sizes="(min-width: 992px) 96px, 80px"
+              className="h-[50px] min-[992px]:h-[60px] w-auto"
               priority
             />
           </Link>
