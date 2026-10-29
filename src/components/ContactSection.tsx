@@ -31,7 +31,7 @@ const contactCards = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-24 bg-coffee-light py-20 text-coffee-brown">
+    <section id="contact" aria-labelledby="contact-heading" className="glass-section scroll-mt-24 py-20 text-coffee-brown">
       <div className="container">
         <div className="mb-12 text-center">
           <h2 id="contact-heading" className="mb-4 text-4xl font-bold">Contact Us</h2>
@@ -41,7 +41,7 @@ const ContactSection = () => {
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {contactCards.map(({ title, hint, icon: Icon, actionIcon: ActionIcon, details, action, href, primary, external }) => (
-            <article key={title} className="flex min-w-0 flex-col rounded-xl border border-coffee-brown/10 bg-white p-5 lg:p-6">
+            <article key={title} className="glass-card flex min-w-0 flex-col rounded-xl p-5 lg:p-6">
               <div className="mb-5 flex items-start gap-4 md:flex-col md:items-center md:text-center">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-coffee-light md:h-14 md:w-14">
                   <Icon size={24} aria-hidden="true" />

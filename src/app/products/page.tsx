@@ -111,7 +111,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-white">
+      <section className="glass-section py-20">
         <div className="container">
           {/* Tabs */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -141,7 +141,7 @@ const ProductsPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {robustaProducts.map((product, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div key={index} className="glass-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative h-48 w-full">
                     <Image
                       src={product.image}
@@ -179,7 +179,7 @@ const ProductsPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {arabicaProducts.map((product, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div key={index} className="glass-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative h-48 w-full">
                     <Image
                       src={product.image}

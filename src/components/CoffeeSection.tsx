@@ -21,7 +21,7 @@ const CoffeeSection = () => {
   ];
 
   return (
-    <section id="beans" className="py-20 bg-coffee-light">
+    <section id="beans" className="glass-section py-20">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-coffee-brown mb-4">Green Coffee Beans</h2>
@@ -50,7 +50,7 @@ const CoffeeSection = () => {
         <div className={activeTab === 0 ? 'block' : 'hidden'}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {greenBeans.map((bean, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div key={index} className="glass-card rounded-lg overflow-hidden">
                 <div className="relative h-48 w-full">
                   <Image 
                     src={bean.image} 
@@ -75,7 +75,7 @@ const CoffeeSection = () => {
         <div className={activeTab === 1 ? 'block' : 'hidden'}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {arabicaBeans.map((bean, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div key={index} className="glass-card rounded-lg overflow-hidden">
                 <div className="relative h-48 w-full">
                   <Image
                     src={bean.image}
