@@ -1,57 +1,82 @@
-"use client";
 import React from 'react';
+import { Mail, Phone, MessageCircle, MapPin, Send, PhoneCall, Navigation } from 'lucide-react';
+
+const contactCards = [
+  {
+    title: 'Email us', hint: 'Quotes, orders and partnerships', icon: Mail, actionIcon: Send,
+    details: [{ label: 'sales@zicofe.com', href: 'mailto:sales@zicofe.com' }],
+    action: 'Send an email', href: 'mailto:sales@zicofe.com', primary: true, external: false,
+  },
+  {
+    title: 'Call us', hint: 'Speak with our team', icon: Phone, actionIcon: PhoneCall,
+    details: [
+      { label: '+256 702 720720', href: 'tel:+256702720720' },
+      { label: '+256 752 028 886', href: 'tel:+256752028886' },
+    ],
+    action: 'Call us', href: 'tel:+256702720720', primary: false, external: false,
+  },
+  {
+    title: 'WhatsApp', hint: 'Message our sales team', icon: MessageCircle, actionIcon: MessageCircle,
+    details: [{ label: '+256 752 028 886', href: 'https://wa.me/256752028886' }],
+    action: 'Chat now', href: 'https://wa.me/256752028886', primary: false, external: true,
+  },
+  {
+    title: 'Visit us', hint: 'Our roastery', icon: MapPin, actionIcon: Navigation,
+    details: [{ label: 'Plot 104, 5th Street Industrial Area, Bugolobi, Kampala', href: '' }],
+    action: 'Get directions',
+    href: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('Zigoti Coffee Works, Plot 104, 5th Street Industrial Area, Bugolobi, Kampala, Uganda')}`,
+    primary: false, external: true,
+  },
+];
 
 const ContactSection = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted');
-  };
-
   return (
-    <section id="contact" className="py-20 bg-coffee-light">
+    <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-24 bg-coffee-light py-20 text-coffee-brown">
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-coffee-brown mb-4">Contact Us</h2>
-          <p className="text-xl text-coffee-brown max-w-3xl mx-auto">
+        <div className="mb-12 text-center">
+          <h2 id="contact-heading" className="mb-4 text-4xl font-bold">Contact Us</h2>
+          <p className="mx-auto max-w-3xl text-xl">
             Reach out to us for inquiries, orders, or partnerships
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold text-coffee-brown mb-4">Get In Touch</h3>
-            <p className="text-coffee-brown mb-6">
-              Visit our roastery at Plot 104, 5th Street Industrial Area, Bugolobi, Kampala.
-            </p>
-            <p className="text-coffee-brown mb-6">
-              Call us at: +256 701 465 283 or +256 762 764 298
-            </p>
-            <p className="text-coffee-brown mb-6">
-              Email: sales@zicofe.com
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold text-coffee-brown mb-4">Send Us a Message</h3>
-            
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              <div>
-                <label htmlFor="name" className="block text-coffee-brown mb-2 font-medium">Your Name</label>
-                <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-gray-900" />
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {contactCards.map(({ title, hint, icon: Icon, actionIcon: ActionIcon, details, action, href, primary, external }) => (
+            <article key={title} className="flex min-w-0 flex-col rounded-xl border border-coffee-brown/10 bg-white p-5 lg:p-6">
+              <div className="mb-5 flex items-start gap-4 md:flex-col md:items-center md:text-center">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-coffee-light md:h-14 md:w-14">
+                  <Icon size={24} aria-hidden="true" />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="mb-1 text-xl font-semibold">{title}</h3>
+                  <p className="mb-3 hidden text-sm text-coffee-medium md:block">{hint}</p>
+                  <div className="space-y-1 break-words">
+                    {details.map(({ label, href: detailHref }) => (
+                      detailHref ? (
+                        <a
+                          key={label}
+                          href={detailHref}
+                          target={external ? '_blank' : undefined}
+                          rel={external ? 'noopener noreferrer' : undefined}
+                          className="block rounded-sm hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coffee-brown"
+                        >
+                          {label}
+                        </a>
+                      ) : <p key={label}>{label}</p>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div>
-                <label htmlFor="email" className="block text-coffee-brown mb-2 font-medium">Your Email</label>
-                <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-gray-900" />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-coffee-brown mb-2 font-medium">Message</label>
-                <textarea id="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-coffee-brown focus:outline-none text-gray-900"></textarea>
-              </div>
-              <button type="submit" className="bg-coffee-brown text-white px-6 py-3 rounded-md hover:bg-coffee-dark transition-colors">
-                Send Message
-              </button>
-            </form>
-          </div>
+              <a
+                href={href}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
+                className={`mt-auto flex min-h-[44px] items-center justify-center gap-2 rounded-lg border border-coffee-brown px-3 py-3 text-center font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-coffee-brown ${primary ? 'bg-coffee-brown text-white hover:bg-coffee-dark' : 'text-coffee-brown hover:bg-coffee-light'}`}
+              >
+                <ActionIcon size={18} aria-hidden="true" />
+                {action}
+              </a>
+            </article>
+          ))}
         </div>
       </div>
     </section>
