@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/" className="block shrink-0">
             <Image
-              src="/images/zicofe-logo-navbar.svg"
+              src="/images/ZICOFE-EST-1984-spaced.svg"
               alt="ZICOFE Logo"
               width={1583}
               height={993}
