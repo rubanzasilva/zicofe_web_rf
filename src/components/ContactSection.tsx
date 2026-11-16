@@ -21,7 +21,7 @@ const contactCards = [
     action: 'Chat now', href: 'https://wa.me/256752028886', primary: false, external: true,
   },
   {
-    title: 'Visit us', hint: 'Our roastery', icon: MapPin, actionIcon: Navigation,
+    title: 'Visit us', hint: 'Our Head Office', icon: MapPin, actionIcon: Navigation,
     details: [{ label: 'Plot 104, 5th Street Industrial Area, Bugolobi, Kampala', href: '' }],
     action: 'Get directions',
     href: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('Zigoti Coffee Works, Plot 104, 5th Street Industrial Area, Bugolobi, Kampala, Uganda')}`,
