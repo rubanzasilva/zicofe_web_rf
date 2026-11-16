@@ -57,7 +57,7 @@ const HeroSection = () => {
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 drop-shadow-lg">ZICOFE</h1>
           <p className="text-2xl md:text-3xl text-white mb-8 drop-shadow-lg">INSPIRING CHANGE, ONE BEAN AT A TIME</p>
           <p className="text-xl text-white mb-10 drop-shadow-md">
-            Renowned for our top-quality Robusta coffee, Zigoti has drawn attention and respect from specialty coffee traders and consumers worldwide.
+            Renowned for our top-quality Robusta coffee, ZICOFE has drawn attention and respect from specialty coffee traders and consumers worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button onClick={() => scrollToSection('about')} className="bg-coffee-dark text-white px-8 py-3 rounded-md hover:bg-coffee-brown transition-colors shadow-lg">

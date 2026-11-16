@@ -34,7 +34,7 @@ const AboutSection = () => {
               rural town of Zigoti, in central Uganda.
             </p>
             <p className="text-charcoal mb-6">
-              They acquired it, and so Zigoti Coffee was born. Rose and Enock dedicated
+              They acquired it, and so Zigoti Coffee (ZICOFE) was born. Rose and Enock dedicated
               themselves to nurturing their dream, tirelessly working the land to establish
               their coffee farm, mill, roastery and even a beautiful hotel, Enro Hotel.
             </p>
